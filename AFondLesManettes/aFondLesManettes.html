@@ -1,0 +1,325 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>A Fond Les Manettes - Lyon Craft 2024</title>
+
+    <link rel="stylesheet" href="../dist/reset.css">
+    <link rel="stylesheet" href="../dist/reveal.css">
+    <link rel="stylesheet" href="../dist/theme/white.css">
+
+    <!-- Theme used for syntax highlighted code -->
+    <link rel="stylesheet" href="../plugin/highlight/monokai.css">
+</head>
+<body>
+<div class="reveal">
+    <div class="slides">
+        <!-- TODO Il faut qu'au démarrage j'ai les tests de lancé, avec tests auto.
+                 -->
+
+        <section>
+            <h1>À fond les manettes</h1>
+            <br>
+            <br>
+            <p>
+                <small>Gaspard POINTEAU<a href="http://twitter.com/Gaspard_PO">@Gaspard_PO</a></small>
+            </p>
+        </section>
+        <section>
+            <section>
+                <h2>Gaspard POINTEAU</h2>
+                <img src="Images/intro-expertErgonomie.jpeg" alt="je suis un expert en ergonomie" width="650">
+            </section>
+            <!--<section>
+                <ul>
+                    <li>Dev back</li>
+                    <li>JVM (java, Kotlin) mais pas que</li>
+                    <li>Les individus et leurs interactions plus que les processus et les outils.</li>
+                    <li>Pratiques crafts, TDD</li>
+                    <li>Full Remote</li>
+                    <li>80%</li>
+                </ul>
+                <p>
+                    <a href="https://www.linkedin.com/in/gaspard-pointeau/">https://www.linkedin.com/in/gaspard-pointeau/</a>
+                </p>
+            </section>-->
+            <section>
+                <img src="Images/intro-logo-ADD.png" alt="Ardèch Drôme Dev" width="650"></br>
+                <img src="Images/intro-qr-code-ADD.png" alt="QR Code ADD" width="250">
+                <aside class="notes">
+                    On offre des licences intellij si vous venez parler
+                </aside>
+            </section>
+            <section>
+                <h2>Formation</h2>
+                <ul>
+                    <li>Craft : TDD, Legacy, Agilité, travail d'équipe ...</li>
+                    <li>Refacto de code legacy</li>
+                    <li>Agilité (canal historique : XP, manifesto)</li>
+                    <li>Scrum</li>
+                </ul>
+                <p>Certification Qualiopi : financé par OPCO</p>
+            </section>
+            <aside class="notes">
+                hack Your Job
+            </aside>
+        </section>
+        <section>
+            <section>
+                <h1>La manette</h1>
+                <img src="Images/manette-dualShock.jpg" alt="manette de playstation Dual Shock" height="500">
+                <!-- TODO : peut être prévoir des photos de clavier bépos, quewertz et autre trucs ?
+                -->
+            </section>
+            <section>
+                <h3>Antimicro / AntimicroX</h3>
+                <img src="Images/manette-antimicro.png" alt="capture d'écran du logiciel Antimicro" height="450">
+                <a href="https://github.com/AntiMicroX/antimicrox">https://github.com/AntiMicroX/antimicrox</a>
+            </section>
+            <section>
+                <h3>Mapping :</h3>
+                <img src="Images/mapping-1.jpg" alt="Mapping 1 : flêches directionnelles, Echap et Entrée."
+                     height="500">
+            </section>
+        </section>
+        <section>
+            <section>
+                <h1>Gilded Rose</h1>
+                <p>
+                    <a href="https://github.com/emilybache/GildedRose-Refactoring-Kata">https://github.com/emilybache/GildedRose-Refactoring-Kata</a>
+                </p>
+                <img src="Images/gildedRose-lang1.png"
+                     alt="capture d'écran de la liste des languages possibles pour le gilded Rose" height="400">
+                <img src="Images/gildedRose-lang2.png"
+                     alt="capture d'écran de la liste des languages possibles pour le gilded Rose" height="400">
+            </section>
+            <section>
+                <p>Gestion d'un hôtel des ventes de WoW.
+                <p>
+                <p>Les objets ont une qualité (prix) qui varie en fonction du temps.
+                <p>
+                <p>Des règles spécifiques selon le type d'objet et leur date de péremption (sellIn).</p>
+            </section>
+            <section>
+                <img src="Images/mapping-2.jpg" alt="Mapping 2 : Ctrl, tab, shift." height="500">
+                <p>switcher : ctrl + tab </p>
+                <p>hide : shift + echap </p>
+            </section>
+        </section>
+        <section>
+            <section>
+                <h2>Tests</h2>
+            </section>
+            <section>
+                <p>Tests automatiques sur IntelliJ : </p>
+                <p>Les tests sont relancés automatiquement à chaque modification d'un fichier.</p>
+                <img src="Images/tests-test-automatiques.png" alt="Capture d'écran du bouton de tests automatiques."
+                     height="300">
+            </section>
+            <section>
+                <h3>Golden Master Test</h3>
+                <p>Le système est une boite noire, on vérifie que pour les mêmes entrées on a toujours les mêmes
+                    sorties</p>
+                <img src="Images/tests-black-box.jpg" alt="inputs goes to black-box, ouput goes" height="300">
+            </section>
+            <section>
+                <h3>Approvals</h3>
+                <p>Sérialiser les objets, ou rediriger les sorties pour avoir du texte facile à comparer</p>
+                <p>Générer les combinaisons possibles d'entrées.</p>
+                <p><a href="https://github.com/approvals/">
+                    https://github.com/approvals
+                </a></p>
+            </section>
+            <section>
+                <h2>Mutation : </br>
+                    tester le test</h2>
+                <div class="column">
+                    <img src="Images/tests-TDD.gif" alt="TDD : Red, Green, Refactor" height="450">
+                </div>
+                <div class="column">
+                    <p>Vérifier que les tests attrapent les bugs</p>
+                    <p>Partie Rouge du TDD</p>
+                    <p>Outils de mutation testing, ou à la main</p>
+                </div>
+            </section>
+            <section>
+                <h2>Historique</h2>
+                <p>ctrl +Z, commit et git, historique local ...</p>
+                <p>permettre de tester des trucs sans risques et revenir à un état stable</p>
+            </section>
+            <section>
+                <h2>Historique Local</h2>
+                <img src="Images/tests-localhistory.png" alt="capture d'écran d'un historique local sous intellij"
+                     height="450">
+            </section>
+            <section>
+                <img src="Images/mapping-3.jpg" alt="Mapping 3 : Z, suppr." height="500">
+                <p>annuler : ctrl + Z </p>
+            </section>
+        </section>
+        <section>
+            <section>
+                <h2>Refacto</h2>
+            </section>
+            <section>
+                <img src="Images/mapping-4.jpg" alt="Mapping 4 : Alt, F6, C, V." height="500">
+            </section>
+            <section>
+                <h1>Alt-Entrée : quick fix </h1>
+            </section>
+            <section>
+                <p>ctrl + alt + C : extract constant</p>
+                <p>ctrl + alt + V : extract variable</p>
+                <p>ctrl + alt + M : extract Méthode</p>
+                <p>ctrl + alt + N : Inline</p>
+                <p>F6 : Move, escalate</p>
+                <p>shift + F6 : rename</p>
+            </section>
+            <section>
+                Utiliser les warning de l'IDE</br>
+                <p>Extraire des tout petits morceaux,</p>
+                <p>Partir du plus imbriqué</p>
+            </section>
+            <section>
+                <h2>Duplication, méthodes</h2>
+                <p>Faire apparaitre la duplication</p>
+                <p>Rendre la méthode cohérente d'un point de vue métier</p>
+                <p>Déplacer au bon endroit</p>
+            </section>
+            <!-- TODO ne pas forcément supprimer la duplication de code, mais essayer de faire apparaitre l'abstraction métier -->
+            <section>
+                <p>Écrire des tests unitaires qui définissent le besoin</p>
+                <img src="Images/refacto-testunitaires.png" alt="capture d'écran des tests unitaires de l'Item"
+                     height="500">
+            </section>
+        </section>
+        <section>
+            <section>
+                <h2>Flow of control</h2>
+            </section>
+            <section>
+                <p>Rendre l'ordre cohérent : mettre ensemble les tests de même catégorie</p>
+                <p>Ne pas avoir peur de dupliquer pour supprimer les mauvaises généralisations</p>
+                <p>Faire apparaitre le vide pour expliciter</p>
+            </section>
+            <section>
+                <p>ctrl + alt + L : reformat le code</p>
+            </section>
+        </section>
+        <section>
+            <section>
+                <h2>Polymorphisme</h2>
+                <p>Remplacer des tests sur un type</br> par de l'héritage.</p>
+            </section>
+            <section>
+                <img src="Images/refacto-uml.png"
+                     alt="diagramme de classe, Item en classe mère, Sulfuras, Aged Brie et Passes en classe héritées"
+                     height="500">
+                <p>Ctrl + Alt + Shift + U : générer le diagramme</p>
+            </section>
+            <section>
+                <h3>Babystep : <br>
+                    par toutes petites étapes </h3>
+                <p>Commencer par un objet vide et overrider les méthodes une par une.</p>
+                <p>Faire objet par objet</p>
+            </section>
+            <section>
+                <p>Penser (encore) aux tests unitaires pour écrire des specs</p>
+                <img src="Images/refacto-testunitaires-2.png" alt="capture d'écran des tests unitaires de Aged Brie"
+                     height="500">
+            </section>
+        </section>
+        <section>
+            <h2>Ajout de nouvelle fonctionnalité</h2>
+            <section>
+                <p>Du TDD pour décrire le besoin.</p>
+                <p>Décrire précisemment, avec les types et les variables.</p>
+                <p>Génération automatique</p>
+            </section>
+        </section>
+        <section>
+            <section>
+                <h3>On résume le refacto :</h3>
+                <p>Tests de non-régression fiables</p>
+                <p>Tests Automatiques</p>
+                <p>Babysteps</p>
+                <p>Du plus imbriqué au plus général</p>
+                <p>Faire apparaitre la duplication explicitement</p>
+            </section>
+            <section>
+                <h3>Les boutons nécessaires :</h3>
+                <img src="Images/mapping-4.jpg" alt="Mapping 4 : total." height="500">
+            </section>
+            <section>
+                <h3>Limitations de la manette :</h3>
+                <p>Impossible de faire notre vrai travail :</p>
+                <p>Faire apparaitre la connaissance métier via le namming et les tests</p>
+            </section>
+            <section>
+                <h2>Shift Shift :<br> Search Everywhere</h2>
+            </section>
+        </section>
+        <section>
+            <section>
+                <p> Plein de Katas :</p>
+                <div class="row">
+                    <div class="column-l">
+                        <img src="Images/suite-emilybache.jpeg" alt="Emily Bache" height="100">
+                    </div>
+                    <div class="column-r">
+                        <a href="https://github.com/emilybache">https://github.com/emilybache</a>
+                    </div>
+                </div>
+
+                <p>99 Bottles of OOP : </p>
+                <div class="row">
+                    <div class="column-l">
+                        <img src="Images/suite-katrinaowen.jpeg" alt="Katrina Owen" height="100">
+
+                    </div>
+                    <div class="column-r">
+                        <a href="https://exercism.github.io/kytrinyx/">https://exercism.github.io/kytrinyx/</a>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="column-l">
+                        <img src="Images/suite-sandymetz.jpeg" alt="Sandy Metz" height="100">
+                    </div>
+                    <div class="column-r">
+                        <a href="https://sandimetz.com//">https://sandimetz.com//</a>
+                    </div>
+                </div>
+            </section>
+            <section>
+                <iframe width="845" height="494" src="https://www.youtube.com/embed/59YClXmkCVM?si=YMoyT09qc5IpF2S1"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </section>
+            <section>
+                <!--TODO : lien et qr code vers mes slides.  -->
+            </section>
+        </section>
+    </div>
+</div>
+
+<script src="../dist/reveal.js"></script>
+<script src="../plugin/notes/notes.js"></script>
+<script src="../plugin/markdown/markdown.js"></script>
+<script src="../plugin/highlight/highlight.js"></script>
+<script>
+    // More info about initialization & config:
+    // - https://revealjs.com/initialization/
+    // - https://revealjs.com/config/
+    Reveal.initialize({
+        hash: true,
+
+        // Learn about plugins: https://revealjs.com/plugins/
+        plugins: [RevealMarkdown, RevealHighlight, RevealNotes]
+    });
+</script>
+</body>
+</html>

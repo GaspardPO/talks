@@ -270,7 +270,7 @@ gulp.task('package', gulp.series(() =>
 
     gulp.src(
         [
-            './index.html',
+            './aFondLesManettes.html',
             './dist/**',
             './lib/**',
             './images/**',
@@ -283,7 +283,7 @@ gulp.task('package', gulp.series(() =>
 
 ))
 
-gulp.task('reload', () => gulp.src(['index.html'])
+gulp.task('reload', () => gulp.src(['aFondLesManettes.html'])
     .pipe(connect.reload()));
 
 gulp.task('serve', () => {
